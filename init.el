@@ -3,6 +3,8 @@
   '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 ;; Packages to install if not installed.
 (defvar packages-to-install '(auctex
