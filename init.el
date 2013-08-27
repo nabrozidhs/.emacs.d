@@ -6,6 +6,7 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+
 ;; Packages to install if not installed.
 (defvar packages-to-install '(auctex
                               clojure-mode
@@ -33,3 +34,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
+
+
+;; Keyboard
+(setq ns-right-alternate-modifier nil) ; Unbind on mac the right ALT from emacs.
