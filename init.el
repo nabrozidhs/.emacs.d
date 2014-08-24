@@ -38,3 +38,7 @@
 
 ;; Keyboard
 (setq ns-right-alternate-modifier nil) ; Unbind on mac the right ALT from emacs.
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-hook 'haskell-mode-hook
+          (lambda () (define-key haskell-mode-map (kbd "C-j") 'haskell-newline-and-indent)))
